@@ -19,7 +19,7 @@ const AboutSection: React.FC = () => {
     </div>
   </div>
   <div className={styles.about_logo}>
-    <img src='src/images/logo-only.png' alt="Логотип Adventure Events" />
+    <img src='src/images/logo-only.svg' alt="Логотип Adventure Events" />
   </div>
 </section>
 
