@@ -5,7 +5,7 @@ import styles from './MyTeam.module.css';
 const TeamSection: React.FC = () => {
   return (
     <section className={styles.team}>
-      <h2>Наша команда</h2>
+      <h2 className={styles.heading}>Наша команда</h2>
       <div className={styles.teamGrid}>
         {teamData.map(member => (
           <div key={member.id} className={styles.teamMember}>

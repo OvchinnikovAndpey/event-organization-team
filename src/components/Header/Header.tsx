@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styles from './Header.module.css';
 import { FaVk, FaTelegram, FaWhatsapp } from 'react-icons/fa';
 
@@ -7,16 +8,16 @@ const Header: React.FC = () => {
     <header className={styles.header}>
       <div className={styles.headerContent}>
         <div className={styles.logo}>
-          <img src='src/images/logo.png' alt="Логотип Adventure Events" />
+          <img src='src/images/logo-only.svg' alt="Логотип Adventure Events" />
         </div>
         
         <nav className={styles.navigation}>
           <ul className={styles.navList}>
-            <li><a href="#about">О нас</a></li>
-            <li><a href="#team">Наша команда</a></li>
-            <li><a href="#services">Услуги</a></li>
-            <li><a href="#photo">Фото с мероприятий</a></li>
-            <li><a href="#contacts">Контакты</a></li>
+            <li><Link to="/about">О нас</Link></li>
+            <li><Link to="/team">Наша команда</Link></li>
+            <li><Link to="/services">Услуги</Link></li>
+            <li><Link to="/photo">Фото с мероприятий</Link></li>
+            <li><Link to="/contacts">Контакты</Link></li>
           </ul>
         </nav>
 

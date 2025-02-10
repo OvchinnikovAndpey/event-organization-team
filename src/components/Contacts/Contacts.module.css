@@ -4,6 +4,14 @@
   background-color: #e9e9e9;
 }
 
+.title {
+  /* padding-bottom: 2rem; */
+}
+
+.mapBox {
+padding: 2rem 0;
+}
+
 .contacts .socialLinks {
   display: flex;
   justify-content: center;

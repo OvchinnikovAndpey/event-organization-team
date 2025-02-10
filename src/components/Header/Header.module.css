@@ -1,4 +1,7 @@
 .header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
   background-color: #111111;
   color: white;
   padding: 2rem 4rem;
@@ -22,7 +25,7 @@
 .logo img {
   width: 100rem;
   height: auto;
-  max-width: 360px;
+  max-width: 250px;
   display: block;
 }
 
@@ -48,11 +51,17 @@
 .navList a {
   color: white;
   text-decoration: none;
-  transition: color 0.3s ease;
+  background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .3s;
 }
 
 .navList a:hover {
   color: #faea0e;
+  /* text-decoration: underline; */
+  background-size: 100% 2px;
 }
 
 .socialLinks {
