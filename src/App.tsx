@@ -1,10 +1,11 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout/Layout';
-import AboutSection from './components/AboutSection/AboutSection';
-import Contacts from './components/Contacts/Contacts';
-import MyTeam from './components/MyTeam/MyTeam';
-import Services from './components/Services/Services';
+import AboutSection from './components/Pages/AboutSection/AboutSection';
+import Contacts from './components/Pages/Contacts/Contacts';
+import MyTeam from './components/Pages/MyTeam/MyTeam';
+import Services from './components/Pages/Services/Services';
+import General from './components/Pages/General/General';
 import './styles/global.css';
 
 const App: React.FC = () => {
@@ -12,7 +13,7 @@ const App: React.FC = () => {
     <BrowserRouter>
       <Layout>
         <Routes>
-          <Route path="/" element={<AboutSection />} />
+          <Route path="/" element={<General />} />
           <Route path="/about" element={<AboutSection />} />
           <Route path="/team" element={<MyTeam />} />
           <Route path="/services" element={<Services />} />

@@ -1,7 +1,7 @@
 import React from 'react';
 import { teamData } from './MyTeamData';
 import styles from './MyTeam.module.css';
-import Modal from '../Modal/Modal';
+import Modal from '../../Modal/Modal';
 
 const TeamSection: React.FC = () => {
   const [modalActive, setModalActive] = React.useState(false);

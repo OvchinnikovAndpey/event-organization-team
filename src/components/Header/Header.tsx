@@ -7,9 +7,9 @@ const Header: React.FC = () => {
   return (
     <header className={styles.header}>
       <div className={styles.headerContent}>
-        <div className={styles.logo}>
+        <Link to="/" className={styles.logo}>
           <img src='src/images/logo-only.svg' alt="Логотип Adventure Events" />
-        </div>
+        </Link>
         
         <nav className={styles.navigation}>
           <ul className={styles.navList}>
