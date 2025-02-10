@@ -7,8 +7,9 @@
 }
 
 body {
-  /* min-inline-size: 375px;
-  max-inline-size: 1440px; */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   margin: 0 auto;
   font-size: 18px;
   font-family: Raleway, sans-serif;
@@ -42,3 +43,4 @@ a {
   font-size: inherit;
   line-height: inherit;
 }
+
