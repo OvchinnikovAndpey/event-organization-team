@@ -59,7 +59,7 @@
 }
 
 .navList a:hover {
-  color: #faea0e;
+  color:rgb(199, 218, 53);;
   /* text-decoration: underline; */
   background-size: 100% 2px;
 }

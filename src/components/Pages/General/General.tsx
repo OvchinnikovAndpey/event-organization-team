@@ -26,7 +26,7 @@ export const General: React.FC = () => {
       <Modal active={isModalActive} setActive={handleCloseModal}>
         <Form
           title="Свяжитесь с нами"
-          description="Заполните форму, и мы свяжемся с вами"
+          description="Заполните форму, и ожидайте звонка в течение часа"
           buttonText="Отправить"
           onSubmit={(e) => {
             e.preventDefault();
