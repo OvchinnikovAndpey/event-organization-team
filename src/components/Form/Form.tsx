@@ -2,15 +2,16 @@ import React from 'react';
 import styles from './Form.module.css';
 
 interface FormProps {
+  className?: string;
   title: string;
   description: string;
   buttonText: string;
   onSubmit: (event: React.FormEvent) => void;
 }
 
-const Form: React.FC<FormProps> = ({ title, description, buttonText, onSubmit }) => {
+const Form: React.FC<FormProps> = ({ title, description, buttonText, onSubmit, className }) => {
   return (
-    <div className={styles.formContainer}>
+    <div className={`${styles.formContainer} ${className || ''}`}>
       <h2 className={styles.title}>{title}</h2>
       <p className={styles.description}>{description}</p>
       <form onSubmit={onSubmit} className={styles.form}>

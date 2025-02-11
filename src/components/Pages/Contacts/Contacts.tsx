@@ -1,19 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './Contacts.module.css';
 import { FaVk, FaTelegram, FaWhatsapp } from 'react-icons/fa';
 import Form from '../../Form/Form';
+import Modal from '../../Modal/Modal';
 
 const Contacts: React.FC = () => {
+  const [isModalActive, setIsModalActive] = useState(false);
+
   const handleFormSubmit = (event: React.FormEvent) => {
     event.preventDefault();
-    // Логика отправки данных формы
     console.log('Форма отправлена');
+    setIsModalActive(true);
   };
 
   return (
     <section className={styles.contacts} id="contacts">
       <div className={styles.contactsForm}>
         <Form
+          className={styles.leftAlignedForm}
           title="Как с нами связаться?"
           description="Заполните форму и мы свяжемся с вами в течение часа"
           buttonText="Заказать звонок"
@@ -39,6 +43,15 @@ const Contacts: React.FC = () => {
           </a>
         </div>
       </div>
+      <Modal active={isModalActive} setActive={setIsModalActive}>
+        <div className={styles.thankYouMessage}>
+          <h3>Спасибо за обращение!</h3>
+          <div className={styles.modalImage}>
+            <img className={styles.modalImage} src="src\images\thank-you.svg" alt="Thank You" />
+          </div>
+          <p>Ожидайте сообщение от нашего менеджера</p>
+        </div>
+      </Modal>
     </section>
   );
 };
