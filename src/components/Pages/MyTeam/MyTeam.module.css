@@ -1,22 +1,27 @@
 .team {
-  margin: 100px auto;
-  max-width: 1200px;
-  padding: 1rem 20px;
+  margin: 120px auto;
+  max-width: 1600px; /* Ensure the team section has the same max-width as the grid */
+  padding: 0 20px; /* Add padding to align with the grid */
 }
 
 .heading {
-  text-align: center;
+  font-size: 40px;
+  font-weight: 400;
+  text-align: left;
   margin-bottom: 2rem;
+  max-width: 1600px; /* Ensure the heading has the same max-width as the grid */
+  margin: 0 auto 2rem; /* Center the heading within the team section */
+  /* margin-left: 135px; */
 }
 
 .teamGrid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1.8rem;
+  gap: 22px 30px;
   margin: 2rem auto;
   max-width: 1600px;
-  padding: 0 20px;
+  /* padding: 0 20px; */
 }
 
 .teamMember {
@@ -49,7 +54,8 @@
 
 .teamMember h3 {
   margin: 10px 0;
-  font-size: 1.5rem;
+  font-size: 23px;
+  font-weight: 400;
   text-align: center;
 }
 

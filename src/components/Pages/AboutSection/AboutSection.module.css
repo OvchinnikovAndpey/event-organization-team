@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   gap: 70px;
-  margin: 100px auto;
+  margin: 120px auto;
   max-width: 1200px;
   padding: 0 20px;
 }
@@ -34,25 +34,52 @@
 }
 
 .about_text_list {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  padding-left: 20px;
+  display: grid;
+  grid-template-columns: 422px 422px;
+  gap: 40px 260px;
 }
 
 .about_text_item {
-  list-style-type: circle;
+  list-style-type: none; /* Удалить стандартный стиль списка */
+  position: relative; /* Для позиционирования псевдоэлементов */
+  padding-left: 30px; /* Отступ для размещения пользовательского маркера */
+  text-align: left; /* Выравнивание текста по левому краю */
+}
+
+.about_text_item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 5%; /* Выравнивание круга по верхнему краю */
+  transform: translateY(0); /* Удалить вертикальное центрирование */
+  width: 18px; /* Размер внешнего круга */
+  height: 18px; /* Размер внешнего круга */
+  background-color: transparent; /* Цвет внешнего круга */
+  border: 1px solid rgb(199, 218, 53); /* Граница для создания круга */
+  border-radius: 50%; /* Сделать круг */
+}
+
+.about_text_item::after {
+  content: '';
+  position: absolute;
+  left: 4px; /* Центрирование точки внутри круга */
+  top: 8px; /* Центрирование точки внутри круга */
+  width: 10px; /* Размер точки */
+  height: 10px; /* Размер точки */
+  background-color: rgb(199, 218, 53); /* Цвет точки */
+  border-radius: 50%; /* Сделать круг */
 }
 
 .about_text_item_text {
   font-size: 18px;
-  line-height: 1.5;
+  font-weight: 400;
+  line-height: 1.4;
   color: #333;
 }
 
 .about_title {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 20px;
+  font-size: 40px;
+  font-weight: 400;
+  margin-bottom: 80px;
   color: #000;
 }
