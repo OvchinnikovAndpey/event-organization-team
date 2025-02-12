@@ -43,7 +43,7 @@
 }
 
 .line {
-    width: 40%;
+    width: 40%; /* Ширина линии */
     height: 10%;
     margin-top: 2rem;
     margin-bottom: 2rem;
