@@ -71,7 +71,7 @@
 
 .socialLinks a {
   font-size: 1.8rem;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, transform 0.3s ease; /* Добавлено transform */
   display: inline-block;
 }
 

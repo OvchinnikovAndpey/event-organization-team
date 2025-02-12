@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styles from './General.module.css';
 import Modal from '../../Modal/Modal';
-import Form from '../../Form/Form'; // Предполагается, что у вас есть компонент Form
+import Form from '../../Form/Form';
 
 export const General: React.FC = () => {
   const [isModalActive, setIsModalActive] = useState(false);
@@ -25,9 +25,11 @@ export const General: React.FC = () => {
       </div>
       <Modal active={isModalActive} setActive={handleCloseModal}>
         <Form
-          title="Свяжитесь с нами"
-          description="Заполните форму, и ожидайте звонка в течение часа"
-          buttonText="Отправить"
+          title="Заполните форму"
+          description="и мы вам перезвоним"
+          buttonText="Заказать звонок"
+          socialText='Или свяжитесь с нами другим способом'
+          socialImages={[]} // Example images
           onSubmit={(e) => {
             e.preventDefault();
             // Логика отправки формы

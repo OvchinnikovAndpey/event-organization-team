@@ -9,6 +9,8 @@
 }
 
 .contactsForm {
+  width: 26.188rem; /*419px*/
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
