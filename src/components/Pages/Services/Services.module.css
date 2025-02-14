@@ -1,7 +1,7 @@
 .card {
   position: relative;
-  width: 400px; /* Задайте фиксированную ширину карточки */
-  height: 400px; /* Задайте фиксированную высоту карточки */
+  width: clamp(15.625rem, 14.2617rem + 6.7114vw, 25rem); /* Задайте фиксированную ширину карточки */
+  height: clamp(18.75rem, 17.8412rem + 4.4743vw, 25rem); /* Задайте фиксированную высоту карточки */
   background-color: #fff;
   border-radius: 8px;
   overflow: hidden;
@@ -56,8 +56,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 40px;
-  margin: 0;
+  font-size: clamp(1.875rem, 1.7841rem + 0.4474vw, 2.5rem); /* 30px to 40px */
+  /* margin: 0; */
   transition: opacity 0.3s;
   text-align: center;
 }
@@ -69,8 +69,9 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 25px;
-  margin: 0;
+  font-size: clamp(1.25rem, 1.2046rem + 0.2237vw, 1.5625rem); /* 20px to 25px */
+  /* margin: 0; */
+  padding: 5px;
   opacity: 0;
   transition: opacity 0.3s;
   text-align: center;

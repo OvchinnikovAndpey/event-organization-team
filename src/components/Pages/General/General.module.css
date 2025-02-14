@@ -72,3 +72,28 @@
 .button:hover {
     background-color: rgb(233,237,198);
 }
+
+.background {
+    height: calc(100vh - 187px);
+}
+
+/* Tablets */
+@media (max-width: 1024px) {
+    .background {
+        height: calc(100vh - 80px);
+    }
+}
+
+/* Large Mobile */
+@media (max-width: 425px) {
+    .background {
+        height: calc(100vh - 64px);
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 375px) {
+    .background {
+        height: calc(100vh - 56px);
+    }
+}
