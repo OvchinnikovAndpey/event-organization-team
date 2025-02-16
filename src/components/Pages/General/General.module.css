@@ -38,7 +38,7 @@
 
 .title {
     text-align: left; /* Выравнивание текста по левому краю */
-    font-size: 45px;
+    font-size: clamp(1.75rem, 1.5982rem + 0.7589vw, 2.8125rem); /* 28px to 28px */
     color: white;
 }
 
@@ -51,7 +51,7 @@
 
 .text {
     text-align: left; /* Выравнивание текста по левому краю */
-    font-size: 25px;
+    font-size: clamp(1.125rem, 1.0625rem + 0.3125vw, 1.5625rem); /* 18px to 25px */
     color: white;
 }
 
