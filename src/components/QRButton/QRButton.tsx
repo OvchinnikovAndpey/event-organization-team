@@ -5,7 +5,8 @@ import styles from './QRButton.module.css';
 
 const QRButton: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const currentURL = window.location.href;
+  const baseURL = "https://event-organization-team.netlify.app";
+  const fullURL = baseURL + window.location.pathname;
 
   return (
     <>
@@ -15,8 +16,8 @@ const QRButton: React.FC = () => {
 
       <Modal active={isModalOpen} setActive={setIsModalOpen}>
         <div className={styles.qrContainer}>
-          <QRCodeSVG 
-            value={currentURL} 
+          <QRCodeSVG
+            value={fullURL}
             size={256}
             level="H"
             includeMargin={true}
