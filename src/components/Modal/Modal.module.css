@@ -1,22 +1,16 @@
 .modal {
   height: 100vh;
   width: 100vw;
-  background-color: rgba(
-    0,
-    0,
-    0,
-    0.6
-  ); /* Увеличена прозрачность для лучшего затемнения */
+  background-color: rgba(0, 0, 0, 0.6);
   position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 100;
+  inset: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.3s ease-in-out; /* Плавный переход для появления */
+  transition: opacity 0.3s ease-in-out;
+  z-index: var(--z-modal-backdrop);
 }
 
 .modal.active {
@@ -27,19 +21,20 @@
 .modalContent {
   position: relative;
   background-color: #fff;
+  z-index: var(--z-modal-content);
   padding: 20px;
   border-radius: 12px;
   width: 90vw;
-  max-width: 800px; /* Фиксированная максимальная ширина */
-  min-height: 200px; /* Минимальная высота */
-  max-height: 90vh;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 800px;
+  min-height: 200px;
+  max-height: calc(100vh - 100px); /* Учитываем отступы от краёв экрана */
+  margin: 50px 20px; /* Отступы сверху и снизу */
+  overflow-y: auto;
   transform: scale(0.5);
   transition: transform 0.4s ease-in-out;
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow-y: auto; /* Добавляем скролл при необходимости */
 }
 
 .modalContent p {

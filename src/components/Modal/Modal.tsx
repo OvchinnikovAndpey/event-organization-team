@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { createPortal } from 'react-dom';
 import styles from "./Modal.module.css";
 
 interface ModalProps {
@@ -8,7 +9,6 @@ interface ModalProps {
 }
 
 const Modal: React.FC<ModalProps> = ({ active, setActive, children }) => {
-  // Close modal on 'Escape' key press
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
@@ -25,7 +25,7 @@ const Modal: React.FC<ModalProps> = ({ active, setActive, children }) => {
     };
   }, [active, setActive]);
 
-  return (
+  const modalContent = (
     <div
       className={active ? `${styles.modal} ${styles.active}` : styles.modal}
       onClick={() => setActive(false)}
@@ -45,6 +45,8 @@ const Modal: React.FC<ModalProps> = ({ active, setActive, children }) => {
       </div>
     </div>
   );
+
+  return createPortal(modalContent, document.body);
 };
 
 export default Modal;

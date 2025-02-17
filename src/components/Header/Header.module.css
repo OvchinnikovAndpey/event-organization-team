@@ -1,9 +1,9 @@
 .header {
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: var(--z-header);
   background-color: #111111;
-  color: var( --main-text-color);
+  color: var(--main-text-color);
   padding: 2rem 4rem;
 }
 
@@ -98,15 +98,16 @@
   display: none;
   flex-direction: column;
   cursor: pointer;
-  z-index: 1000;
+  z-index: 51;
 }
 
 .hamburger span {
   width: 25px;
   height: 3px;
-  color: var( --main-text-color);
+  background-color: var(--main-text-color); /* Заменили color на background-color */
   margin: 3px 0;
   transition: 0.4s;
+  display: block; /* Добавили display: block */
 }
 
 .hamburger.active span:nth-child(1) {
@@ -138,7 +139,7 @@
     height: 70vh;
     background-color: #111111;
     padding: 1rem;
-    z-index: 100;
+    z-index: 49;
     transition: top 0.5s ease;
     display: flex;
     justify-content: center;
