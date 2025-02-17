@@ -34,6 +34,11 @@ const Header: React.FC = () => {
           className={`${styles.navigation} ${isMenuOpen ? styles.active : ``}`}
         >
           <ul className={styles.navList}>
+             <li>
+              <Link to="/" onClick={handleLinkClick}>
+                Главная
+              </Link>
+            </li>
             <li>
               <Link to="/about" onClick={handleLinkClick}>
                 О нас
