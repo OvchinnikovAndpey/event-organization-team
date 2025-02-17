@@ -1,46 +1,44 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { QRCodeSVG } from 'qrcode.react';
 import styles from './QRButton.module.css';
 
 const QRButton: React.FC = () => {
   const [showQR, setShowQR] = useState(false);
+  const qrRef = useRef<SVGSVGElement>(null);
   const currentURL = window.location.href;
 
   const handleShare = async () => {
+    if (!qrRef.current) return;
+
     try {
+      const svgData = new XMLSerializer().serializeToString(qrRef.current);
       const canvas = document.createElement('canvas');
-      const qrElement = document.querySelector('svg');
-      
-      if (qrElement) {
-        const svgData = new XMLSerializer().serializeToString(qrElement);
-        const img = new Image();
-        img.src = 'data:image/svg+xml;base64,' + btoa(svgData);
+      const ctx = canvas.getContext('2d');
+      const img = new Image();
 
-        img.onload = async () => {
-          const context = canvas.getContext('2d');
-          if (context) {
-            canvas.width = img.width;
-            canvas.height = img.height;
-            context.drawImage(img, 0, 0);
-            
-            canvas.toBlob(async (blob) => {
-              if (blob) {
-                const shareData = {
-                  title: 'QR код сайта',
-                  text: 'Отсканируйте QR код для перехода на сайт',
-                  files: [new File([blob], 'qr-code.png', { type: 'image/png' })]
-                };
+      img.onload = async () => {
+        canvas.width = img.width;
+        canvas.height = img.height;
+        ctx?.drawImage(img, 0, 0);
 
-                if (navigator.share && navigator.canShare(shareData)) {
-                  await navigator.share(shareData);
-                } else {
-                  setShowQR(true);
-                }
-              }
-            }, 'image/png');
+        canvas.toBlob(async (blob) => {
+          if (blob) {
+            const shareData = {
+              title: 'QR код сайта',
+              text: 'Отсканируйте QR код для перехода на сайт',
+              files: [new File([blob], 'qr-code.png', { type: 'image/png' })]
+            };
+
+            if (navigator.share && navigator.canShare(shareData)) {
+              await navigator.share(shareData);
+            } else {
+              setShowQR(true);
+            }
           }
-        };
-      }
+        }, 'image/png');
+      };
+
+      img.src = 'data:image/svg+xml;base64,' + btoa(svgData);
     } catch (error) {
       console.log('Ошибка при шаринге:', error);
       setShowQR(true);
@@ -62,7 +60,13 @@ const QRButton: React.FC = () => {
             >
               ✕
             </button>
-            <QRCodeSVG value={currentURL} size={256} />
+            <QRCodeSVG 
+              ref={qrRef}
+              value={currentURL} 
+              size={256}
+              level="H"
+              includeMargin={true}
+            />
             <p>Отсканируйте QR-код для перехода на сайт</p>
           </div>
         </div>
