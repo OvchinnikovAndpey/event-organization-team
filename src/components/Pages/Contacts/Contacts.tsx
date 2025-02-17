@@ -3,6 +3,7 @@ import styles from "./Contacts.module.css";
 import { FaVk, FaTelegram, FaWhatsapp } from "react-icons/fa";
 import Form from "../../Form/Form";
 import Modal from "../../Modal/Modal";
+import QRButton from "../../QRButton/QRButton";
 
 interface FormValues {
   name: string;
@@ -54,6 +55,7 @@ const Contacts: React.FC = () => {
             <FaWhatsapp />
           </a>
         </div>
+        <QRButton />
       </div>
       <Modal active={isModalActive} setActive={setIsModalActive}>
         <div className={styles.thankYouMessage}>
