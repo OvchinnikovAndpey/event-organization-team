@@ -18,7 +18,7 @@ const Header: React.FC = () => {
     <header className={styles.header}>
       <div className={styles.headerContent}>
         <Link to="/" className={styles.logo}>
-          <img src="./public/images/logo-only.svg" alt="Логотип Adventure Events" />
+          <img src="/images/logo-only.svg" alt="Логотип Adventure Events" />
         </Link>
 
         <div
