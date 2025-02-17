@@ -10,7 +10,7 @@
   text-align: left;
   margin-bottom: 2rem;
   width: 100%;
-  color: var( --main-text-color);
+  color: var(--main-text-color);
 }
 
 .teamGrid {

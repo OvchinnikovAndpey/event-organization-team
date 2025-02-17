@@ -29,11 +29,7 @@ const ImageGrid: React.FC = () => {
       </div>
 
       <Modal active={modalActive} setActive={setModalActive}>
-        <img 
-          src={selectedImage} 
-          alt="Selected" 
-          className={styles.modalImage}
-        />
+        <img src={selectedImage} alt="Selected" className={styles.modalImage} />
       </Modal>
     </div>
   );

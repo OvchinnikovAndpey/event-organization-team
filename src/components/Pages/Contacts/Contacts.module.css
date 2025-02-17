@@ -5,7 +5,7 @@
   gap: 87px;
   padding: 2rem;
   text-align: center;
-  color: var( --main-text-color);
+  color: var(--main-text-color);
   /* background-color: #ffffff; */
   /* height: calc(100vh - 187px); */
 }
@@ -76,7 +76,7 @@
 }
 
 .contacts .socialLinks a {
-  color: var( --main-text-color);
+  color: var(--main-text-color);
   font-size: 1.8rem;
   transition: color 0.3s ease;
 }

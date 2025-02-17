@@ -8,8 +8,7 @@ import Services from "./components/Pages/Services/Services";
 import General from "./components/Pages/General/General";
 import Gallery from "./components/Pages/Gallerey/Gallerey";
 import "./styles/global.css";
-import './styles/variables.css';
-
+import "./styles/variables.css";
 
 const App: React.FC = () => {
   return (

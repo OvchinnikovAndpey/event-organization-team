@@ -1,7 +1,7 @@
 :root {
-    --main-text-color: #E5E5E5;
-    --team-card-bg-color: rgb(233, 237, 198);
-    --z-header: 50;
-    --z-modal-backdrop: 100000;
-    --z-modal-content: 100001;
+  --main-text-color: #e5e5e5;
+  --team-card-bg-color: rgb(233, 237, 198);
+  --z-header: 50;
+  --z-modal-backdrop: 100000;
+  --z-modal-content: 100001;
 }

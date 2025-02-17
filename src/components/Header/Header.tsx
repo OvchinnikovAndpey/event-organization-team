@@ -34,7 +34,7 @@ const Header: React.FC = () => {
           className={`${styles.navigation} ${isMenuOpen ? styles.active : ``}`}
         >
           <ul className={styles.navList}>
-             <li>
+            <li>
               <Link to="/" onClick={handleLinkClick}>
                 Главная
               </Link>

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect } from "react";
 import { aboutData } from "./aboutData";
 import styles from "./AboutSection.module.css";
 
@@ -18,8 +18,8 @@ const AboutSection: React.FC = () => {
       },
       {
         threshold: 0.2,
-        rootMargin: "0px"
-      }
+        rootMargin: "0px",
+      },
     );
 
     const items = document.querySelectorAll(`.${styles.about_text_item}`);
@@ -37,7 +37,10 @@ const AboutSection: React.FC = () => {
         <div className={styles.about_text}>
           <ul className={styles.about_text_list}>
             {aboutData.items.map((item, index) => (
-              <li key={index} className={`${styles.about_text_item} ${styles.hidden}`}>
+              <li
+                key={index}
+                className={`${styles.about_text_item} ${styles.hidden}`}
+              >
                 <p className={styles.about_text_item_text}>{item}</p>
               </li>
             ))}

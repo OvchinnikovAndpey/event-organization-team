@@ -104,7 +104,9 @@
 .hamburger span {
   width: 25px;
   height: 3px;
-  background-color: var(--main-text-color); /* Заменили color на background-color */
+  background-color: var(
+    --main-text-color
+  ); /* Заменили color на background-color */
   margin: 3px 0;
   transition: 0.4s;
   display: block; /* Добавили display: block */
@@ -161,7 +163,11 @@
     flex-direction: column;
     align-items: center;
     margin-top: 1rem;
-    font-size: clamp(1.125rem, 0.9216rem + 1.0014vw, 1.5625rem); /*25px to 18px*/
+    font-size: clamp(
+      1.125rem,
+      0.9216rem + 1.0014vw,
+      1.5625rem
+    ); /*25px to 18px*/
     gap: 2.5rem;
   }
 
@@ -220,5 +226,4 @@
   .navigation.active {
     width: 100%;
   }
-
 }
