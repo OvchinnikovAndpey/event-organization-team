@@ -7,4 +7,5 @@
   flex-shrink: 0;
   height: 61px; /* Устанавливаем фиксированную высоту для расчета */
   z-index: 1;
+  font-size: clamp(0.875rem, 0.839rem + 0.179vw, 1.125rem);
 }

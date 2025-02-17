@@ -6,7 +6,8 @@
   box-sizing: border-box;
 }
 
-body, html {
+body,
+html {
   /* min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -18,9 +19,7 @@ body, html {
   overflow-x: hidden;
   font-family: Raleway, sans-serif;
   font-size: 18px;
-  
 }
-
 
 h1,
 h2,
@@ -50,4 +49,3 @@ a {
   font-size: inherit;
   line-height: inherit;
 }
-

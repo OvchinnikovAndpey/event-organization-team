@@ -1,7 +1,7 @@
 .team {
   margin: 60px auto;
   max-width: 1290px; /* (300px * 4) + (30px * 3) = 1290px */
-  padding: 0; 
+  padding: 0;
 }
 
 .heading {
@@ -80,4 +80,47 @@
   margin-top: 10px;
   font-size: 1rem;
   color: #555;
+}
+
+@media (max-width: 1439px) {
+  .team {
+    margin: 60px 20px;
+  }
+
+  .heading {
+    text-align: center;
+  }
+
+  .teamGrid {
+    justify-content: center;
+  }
+}
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .team {
+    margin: 60px 20px;
+  }
+
+  .heading {
+    text-align: center;
+  }
+
+  .teamGrid {
+    justify-content: center;
+  }
+}
+
+/* Large Mobile */
+@media (max-width: 425px) {
+  .team {
+    margin: 60px 20px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 375px) {
+  .team {
+    margin: 60px 10px;
+  }
 }

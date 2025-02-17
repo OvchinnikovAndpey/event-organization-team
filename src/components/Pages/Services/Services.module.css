@@ -1,7 +1,21 @@
+.lots {
+  display: flex;
+  flex-direction: column;
+  margin: 60px 20px;
+}
+
 .card {
   position: relative;
-  width: clamp(15.625rem, 14.2617rem + 6.7114vw, 25rem); /* Задайте фиксированную ширину карточки */
-  height: clamp(18.75rem, 17.8412rem + 4.4743vw, 25rem); /* Задайте фиксированную высоту карточки */
+  width: clamp(
+    15.625rem,
+    14.2617rem + 6.7114vw,
+    25rem
+  ); /* Задайте фиксированную ширину карточки */
+  height: clamp(
+    18.75rem,
+    17.8412rem + 4.4743vw,
+    25rem
+  ); /* Задайте фиксированную высоту карточки */
   background-color: #fff;
   border-radius: 8px;
   overflow: hidden;
@@ -11,13 +25,11 @@
 
 .heading {
   text-align: center;
-  margin: 100px auto;
+  font-size: clamp(1.75rem, 1.641rem + 0.537vw, 2.5rem); 
+  font-weight: 400;
+  margin-bottom: 2rem;
 }
 
-.map {
-  width: 700px;
-  height: 600px;
-}
 .cardList {
   display: flex;
   flex-wrap: wrap;

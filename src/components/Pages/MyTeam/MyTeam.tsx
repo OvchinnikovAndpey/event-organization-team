@@ -1,22 +1,24 @@
-import React from 'react';
-import { teamData } from './MyTeamData';
-import styles from './MyTeam.module.css';
-import Modal from '../../Modal/Modal';
+import React from "react";
+import { teamData } from "./MyTeamData";
+import styles from "./MyTeam.module.css";
+import Modal from "../../Modal/Modal";
 
 const TeamSection: React.FC = () => {
   const [modalActive, setModalActive] = React.useState(false);
-  const [selectedMember, setSelectedMember] = React.useState<null | typeof teamData[0]>(null);
+  const [selectedMember, setSelectedMember] = React.useState<
+    null | (typeof teamData)[0]
+  >(null);
 
-  const openModal = (member: typeof teamData[0]) => {
+  const openModal = (member: (typeof teamData)[0]) => {
     setSelectedMember(member);
     setModalActive(true);
   };
 
   return (
     <section className={styles.team}>
-      <h2 className={styles.heading}>Наша команда</h2>
+      <h2 className={styles.heading}>Команда Adventure Events</h2>
       <div className={styles.teamGrid}>
-        {teamData.map(member => (
+        {teamData.map((member) => (
           <div
             key={member.id}
             className={styles.teamMember}
@@ -29,14 +31,18 @@ const TeamSection: React.FC = () => {
         ))}
       </div>
       <Modal active={modalActive} setActive={setModalActive}>
-  {selectedMember && (
-    <div className={styles.modalContentWrapper}>
-      <img src={selectedMember.photo} alt={selectedMember.name} className={styles.modalImage} />
-      <h3>{selectedMember.name}</h3>
-      <p>{selectedMember.description}</p>
-    </div>
-  )}
-</Modal>
+        {selectedMember && (
+          <div className={styles.modalContentWrapper}>
+            <img
+              src={selectedMember.photo}
+              alt={selectedMember.name}
+              className={styles.modalImage}
+            />
+            <h3>{selectedMember.name}</h3>
+            <p>{selectedMember.description}</p>
+          </div>
+        )}
+      </Modal>
     </section>
   );
 };

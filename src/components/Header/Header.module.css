@@ -23,7 +23,7 @@
 .logo img {
   width: 100rem;
   height: auto;
-  width: clamp(9.375rem, 8.3023rem + 4.5767vw, 15.625rem);;
+  width: clamp(9.375rem, 8.3023rem + 4.5767vw, 15.625rem);
   display: block;
 }
 
@@ -44,7 +44,8 @@
   margin: 0;
   font-size: clamp(0.875rem, 0.8393rem + 0.1786vw, 1.125rem); /* 14px to 18px */
   display: flex;
-  gap: 1.5rem;
+  align-items: center;
+  gap: 2rem;
 }
 
 .navList a {
@@ -54,11 +55,11 @@
   background-position: 0% 100%;
   background-repeat: no-repeat;
   background-size: 0% 2px;
-  transition: background-size .3s;
+  transition: background-size 0.3s;
 }
 
 .navList a:hover {
-  color:rgb(199, 218, 53);;
+  color: rgb(199, 218, 53);
   /* text-decoration: underline; */
   background-size: 100% 2px;
 }
@@ -70,12 +71,14 @@
 
 .socialLinks a {
   font-size: 1.8rem;
-  transition: color 0.3s ease, transform 0.3s ease; /* Добавлено transform */
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease; /* Добавлено transform */
   display: inline-block;
 }
 
 .socialLinks a:nth-child(1) {
-  color: #4C75A3;
+  color: #4c75a3;
 }
 
 .socialLinks a:nth-child(2) {
@@ -83,7 +86,7 @@
 }
 
 .socialLinks a:nth-child(3) {
-  color: #25D366;
+  color: #25d366;
 }
 
 .socialLinks a:hover {
@@ -118,7 +121,6 @@
   transform: rotate(-45deg) translate(8px, -8px);
 }
 
-/* Под ноутбуки до 1024px */
 @media (max-width: 1024px) {
   .header {
     padding: 1rem 2rem;
@@ -130,22 +132,22 @@
 
   .navigation {
     position: absolute;
-    top: -100vh; /* Начальная позиция за пределами экрана сверху */
+    top: -100vh;
     left: 30%;
     width: 50%;
     height: 70vh;
     background-color: #111111;
     padding: 1rem;
     z-index: 100;
-    transition: top 0.5s ease; /* Анимация для свойства top */
+    transition: top 0.5s ease;
     display: flex;
     justify-content: center;
-    opacity: 0; /* Начальная прозрачность */
+    opacity: 0;
   }
 
   .navigation.active {
-    top: 100%; /* Конечная позиция */
-    opacity: 1; /* Полная видимость */
+    top: 100%;
+    opacity: 1;
     display: flex;
     justify-content: center;
     width: 70%;
@@ -162,67 +164,51 @@
     gap: 2.5rem;
   }
 
+  .socialLinksContainer {
+    margin-top: 2rem;
+  }
+
   .socialLinks {
-    position: absolute;
-    top: -100vh;
-    left: 65%;
-    transform: translateX(-50%);
-    gap: 3rem;
-    z-index: 1000;
-    transition: top 0.5s ease;
-    opacity: 0;
-  }
-
-  .socialLinks.active {
     display: flex;
-    position: fixed;
-    top: 85vh;
-    left: 65%;
-    transform: translateX(-50%);
-    gap: 3rem;
-    z-index: 1000;
-    opacity: 1;
+    gap: 2rem;
+    justify-content: center;
   }
 
+  .socialLinks a {
+    font-size: 1.8rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+
+  .socialLinks a:nth-child(1) { color: #4c75a3; }
+  .socialLinks a:nth-child(2) { color: #0088cc; }
+  .socialLinks a:nth-child(3) { color: #25d366; }
+
+  .socialLinks a:hover {
+    opacity: 0.8;
+    transform: scale(1.3);
+  }
 }
 
-/* Планшеты и большие телефоны - 768px - 425px */
-
 @media (max-width: 425px) {
-
   .navigation {
-    left:30%;
-  }
-  
-  .navigation.active{
-    width:70%;
+    left: 30%;
   }
 
-  .navList {
-    /* font-size: clamp(0.875rem, 0.3872rem + 1.8364vw, 1.5625rem); */
+  .navigation.active {
+    width: 70%;
   }
 
-  .socialLinks.active {
-    gap: 2rem;
-    left: 70%;
+  .socialLinks {
+    gap: 1.5rem;
   }
-
 }
 
 @media (max-width: 375px) {
   .navigation {
-    left:0%;
-  }
-  
-  .navigation.active{
-    width:100%;
+    left: 0%;
   }
 
-  .socialLinks {
-    left: 50%;
-  }
-
-  .socialLinks.active {
-    left: 50%;
+  .navigation.active {
+    width: 100%;
   }
 }

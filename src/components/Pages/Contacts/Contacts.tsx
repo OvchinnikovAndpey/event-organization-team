@@ -1,15 +1,19 @@
-import React, { useState } from 'react';
-import styles from './Contacts.module.css';
-import { FaVk, FaTelegram, FaWhatsapp } from 'react-icons/fa';
-import Form from '../../Form/Form';
-import Modal from '../../Modal/Modal';
+import React, { useState } from "react";
+import styles from "./Contacts.module.css";
+import { FaVk, FaTelegram, FaWhatsapp } from "react-icons/fa";
+import Form from "../../Form/Form";
+import Modal from "../../Modal/Modal";
+
+interface FormValues {
+  name: string;
+  phone: string;
+}
 
 const Contacts: React.FC = () => {
   const [isModalActive, setIsModalActive] = useState(false);
 
-  const handleFormSubmit = (event: React.FormEvent) => {
-    event.preventDefault();
-    console.log('Форма отправлена');
+  const handleFormSubmit = (data: FormValues) => {
+    console.log("Форма отправлена", data);
     setIsModalActive(true);
   };
 
@@ -35,10 +39,18 @@ const Contacts: React.FC = () => {
           <a href="https://vk.com/" target="_blank" rel="noopener noreferrer">
             <FaVk />
           </a>
-          <a href="https://telegram.org/" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://telegram.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <FaTelegram />
           </a>
-          <a href="https://web.whatsapp.com/" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://web.whatsapp.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <FaWhatsapp />
           </a>
         </div>
@@ -47,7 +59,11 @@ const Contacts: React.FC = () => {
         <div className={styles.thankYouMessage}>
           <h3>Спасибо за обращение!</h3>
           <div className={styles.modalImage}>
-            <img className={styles.modalImage} src="src\images\thank-you.svg" alt="Thank You" />
+            <img
+              className={styles.modalImage}
+              src="src\images\thank-you.svg"
+              alt="Thank You"
+            />
           </div>
           <p>Ожидайте сообщение от нашего менеджера</p>
         </div>

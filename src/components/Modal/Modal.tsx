@@ -31,13 +31,14 @@ const Modal: React.FC<ModalProps> = ({ active, setActive, children }) => {
       onClick={() => setActive(false)}
     >
       <div
-        className={active ? `${styles.modalContent} ${styles.active}` : styles.modalContent}
+        className={
+          active
+            ? `${styles.modalContent} ${styles.active}`
+            : styles.modalContent
+        }
         onClick={(e) => e.stopPropagation()}
       >
-        <button
-          className={styles.closeButton}
-          onClick={() => setActive(false)}
-        >
+        <button className={styles.closeButton} onClick={() => setActive(false)}>
           &times;
         </button>
         {children}
