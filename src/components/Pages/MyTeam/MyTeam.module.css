@@ -56,10 +56,13 @@
 }
 
 .teamMember p {
-  text-align: center;
+  text-align: justify;
   font-size: 1.1rem;
+  padding: 0.6rem;
   color: #666;
   margin-bottom: auto;
+  word-break: break-word;
+  hyphens: auto;
 }
 
 .modalContentWrapper {

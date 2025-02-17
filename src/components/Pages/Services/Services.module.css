@@ -81,7 +81,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: clamp(1.25rem, 1.2046rem + 0.2237vw, 1.5625rem); /* 20px to 25px */
+  font-size: clamp(1.125rem, 1.0614rem + 0.3132vw, 1.5625rem); /* 18px to 25px */
   /* margin: 0; */
   padding: 5px;
   opacity: 0;
