@@ -1,8 +1,35 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { aboutData } from "./aboutData";
 import styles from "./AboutSection.module.css";
 
 const AboutSection: React.FC = () => {
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add(styles.visible);
+            entry.target.classList.remove(styles.hidden);
+          } else {
+            entry.target.classList.remove(styles.visible);
+            entry.target.classList.add(styles.hidden);
+          }
+        });
+      },
+      {
+        threshold: 0.2,
+        rootMargin: "0px"
+      }
+    );
+
+    const items = document.querySelectorAll(`.${styles.about_text_item}`);
+    items.forEach((item) => observer.observe(item));
+
+    return () => {
+      items.forEach((item) => observer.unobserve(item));
+    };
+  }, []);
+
   return (
     <section className={styles.about}>
       <div className={styles.about_text_container}>
@@ -10,16 +37,13 @@ const AboutSection: React.FC = () => {
         <div className={styles.about_text}>
           <ul className={styles.about_text_list}>
             {aboutData.items.map((item, index) => (
-              <li key={index} className={styles.about_text_item}>
+              <li key={index} className={`${styles.about_text_item} ${styles.hidden}`}>
                 <p className={styles.about_text_item_text}>{item}</p>
               </li>
             ))}
           </ul>
         </div>
       </div>
-      {/* <div className={styles.about_logo}>
-    <img src='src/images/logo-only.svg' alt="Логотип Adventure Events" />
-  </div> */}
     </section>
   );
 };
