@@ -28,6 +28,6 @@ const QRButton: React.FC = () => {
       </Modal>
     </>
   );
-};п
+};
 
 export default QRButton;
