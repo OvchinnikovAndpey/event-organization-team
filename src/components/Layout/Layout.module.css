@@ -1,18 +1,16 @@
-.container {
+/* .container {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  /* background-color: rgb(35, 38, 48); */
 }
 
 main {
   flex: 1;
-  /* padding: 0 2rem; */
-}
+} */
 
 /* Серый фон и фиолетовое свечение */
 
-/* .container {
+.container {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -51,4 +49,8 @@ main {
     flex: 1;
     position: relative;
     z-index: 1;
-} */
+}
+
+
+
+  /* background-color: rgb(35, 38, 48); */

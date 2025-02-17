@@ -30,8 +30,8 @@ const schema = yup.object().shape({
     .string()
     .required("Телефон обязателен")
     .matches(
-      /^\+7\(\d{3}\)\d{3}-\d{2}-\d{2}$/,
-      "Неверный формат телефона. Вводите номер в формате +7(XXX)XXX-XX-XX",
+      /^\+7\d{10}$/,
+      "Неверный формат телефона. Вводите номер в формате +7XXXXXXXXXX",
     ),
 });
 
@@ -77,7 +77,7 @@ const Form: React.FC<FormProps> = ({
           <input
             {...register("phone")}
             type="tel"
-            placeholder="+7(999)999-99-99"
+            placeholder="+79991112233"
             className={styles.input}
           />
           {errors.phone && (

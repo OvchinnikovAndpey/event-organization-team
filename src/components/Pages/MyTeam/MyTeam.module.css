@@ -10,6 +10,7 @@
   text-align: left;
   margin-bottom: 2rem;
   width: 100%;
+  color: var( --main-text-color);
 }
 
 .teamGrid {
@@ -28,9 +29,9 @@
   flex: 0 1 300px;
   min-height: 450px;
   padding: 15px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--team-card-bg-color);
   border-radius: 10px;
-  background-color: #fff;
+  background-color: var(--team-card-bg-color);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease-in-out;
 }
