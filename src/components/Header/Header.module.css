@@ -176,12 +176,20 @@
 
   .socialLinks a {
     font-size: 1.8rem;
-    transition: color 0.3s ease, transform 0.3s ease;
+    transition:
+      color 0.3s ease,
+      transform 0.3s ease;
   }
 
-  .socialLinks a:nth-child(1) { color: #4c75a3; }
-  .socialLinks a:nth-child(2) { color: #0088cc; }
-  .socialLinks a:nth-child(3) { color: #25d366; }
+  .socialLinks a:nth-child(1) {
+    color: #4c75a3;
+  }
+  .socialLinks a:nth-child(2) {
+    color: #0088cc;
+  }
+  .socialLinks a:nth-child(3) {
+    color: #25d366;
+  }
 
   .socialLinks a:hover {
     opacity: 0.8;

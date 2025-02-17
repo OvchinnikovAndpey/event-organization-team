@@ -10,7 +10,8 @@ const Services: React.FC = () => {
   return (
     <section className={styles.lots}>
       <h2 id="lots-view" className={styles.heading}>
-        В данном разделе вы можете выбрать необходимые услуги и получить по ним консультацию.
+        В данном разделе вы можете выбрать необходимые услуги и получить по ним
+        консультацию.
       </h2>
       <ul className={styles.cardList}>
         {ServicesData.map((service) => (

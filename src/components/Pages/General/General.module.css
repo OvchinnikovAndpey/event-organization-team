@@ -1,6 +1,6 @@
 .background {
   position: relative; /* Устанавливаем относительное позиционирование для родителя */
-  background-image: url(../../../images/BackgroundGeneral/bacground-general.jpg);
+  background-image: url(../../../../public/images/BackgroundGeneral/bacground-general.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -111,7 +111,7 @@
   .title {
     font-size: 1.5rem;
   }
-  
+
   .background {
     height: calc(100vh - 56px);
   }
@@ -127,7 +127,7 @@
   .background {
     padding: 1rem;
   }
-  
+
   .title {
     font-size: 1.25rem;
   }

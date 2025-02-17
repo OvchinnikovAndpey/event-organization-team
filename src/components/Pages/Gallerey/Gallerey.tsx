@@ -1,5 +1,5 @@
-import React from 'react';
-import styles from './Gallerey.module.css';
+import React from "react";
+import styles from "./Gallerey.module.css";
 import { GallereyData } from "./GallereyData";
 
 const ImageGrid: React.FC = () => {

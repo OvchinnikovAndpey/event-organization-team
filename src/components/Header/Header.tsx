@@ -18,7 +18,7 @@ const Header: React.FC = () => {
     <header className={styles.header}>
       <div className={styles.headerContent}>
         <Link to="/" className={styles.logo}>
-          <img src="src/images/logo-only.svg" alt="Логотип Adventure Events" />
+          <img src="./public/images/logo-only.svg" alt="Логотип Adventure Events" />
         </Link>
 
         <div
@@ -61,7 +61,11 @@ const Header: React.FC = () => {
             </li>
             <li className={styles.socialLinksContainer}>
               <div className={styles.socialLinks}>
-                <a href="https://vk.com/" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://vk.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <FaVk />
                 </a>
                 <a
