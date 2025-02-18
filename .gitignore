@@ -9,7 +9,7 @@ lerna-debug.log*
 
 node_modules
 dist
-qodo
+.qodo
 dist-ssr
 *.local
 
