@@ -32,7 +32,6 @@ const Services: React.FC = () => {
           </li>
         ))}
       </ul>
-      import QRButton from './components/QRButton/QRButton';
     </section>
   );
 };

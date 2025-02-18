@@ -14,7 +14,7 @@ interface FormValues {
 interface FormProps {
   className?: string;
   title: string;
-  description: string;
+  description?: string;
   buttonText: string;
   onSubmit: (data: FormValues) => void;
   socialImages?: string[];

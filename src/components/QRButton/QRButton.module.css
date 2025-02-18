@@ -1,16 +1,19 @@
 .qrButton {
     padding: 12px 24px;
-    background-color: #8b5cf6;
+    background-color: transparent;
     color: white;
-    border: none;
+    border: 1px solid rgb(233, 237, 198);;
     border-radius: 8px;
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.3s;
+    border-radius: 15px;
   }
   
   .qrButton:hover {
-    background-color: #7c3aed;
+    color: #333;
+    background: rgb(233, 237, 198);
+    transition: all 0.3s ease-in-out;
   }
   
   .qrContainer {

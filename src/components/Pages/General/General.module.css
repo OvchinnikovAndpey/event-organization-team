@@ -1,17 +1,17 @@
 .background {
-  position: relative; /* Устанавливаем относительное позиционирование для родителя */
+  position: relative;
   background-image: url(../../../../public/images/BackgroundGeneral/bacground-general.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  width: 100vw; /* Используем всю ширину окна */
-  height: calc(100vh - 187px); /* Подгоняем под высоту футера */
-  overflow: hidden; /* Убираем прокрутку */
-  box-sizing: border-box; /* Включаем паддинги и границы в ширину и высоту */
+  width: 100vw;
+  height: calc(100vh - 187px);
+  overflow: hidden;
+  box-sizing: border-box;
   display: flex;
-  justify-content: flex-start; /* Выравнивание по левому краю */
-  align-items: center; /* Центрирование по вертикали */
-  padding-left: 4rem; /* Добавляем отступ слева для центрирования */
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 4rem;
 }
 
 .background::before {
@@ -21,41 +21,54 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Черный цвет с полупрозрачностью */
-  z-index: 1; /* Помещаем ниже контента */
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  background-image: inherit;
+  background-size: inherit;
+  background-position: inherit;
+  background-repeat: inherit;
+  animation: zoomInOut 10s infinite alternate ease-in-out;
+}
+
+@keyframes zoomInOut {
+  0% {
+    transform: scale(1); /* Исходный размер */
+  }
+  50% {
+    transform: scale(1.1); /* Увеличиваем до 110% */
+  }
+  100% {
+    transform: scale(1); /* Возвращаемся к исходному размеру */
+  }
 }
 
 .general {
-  position: relative; /* Устанавливаем относительное позиционирование для контента */
+  position: relative;
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Выравнивание по левому краю */
-  justify-content: center; /* Центрирование по вертикали */
-  box-sizing: border-box; /* Учитываем паддинги в ширине и высоте */
-  max-width: 100%; /* Ограничиваем ширину */
-  z-index: 2; /* Помещаем выше затемнения */
+  align-items: flex-start;
+  justify-content: center;
+  box-sizing: border-box;
+  max-width: 100%;
+  z-index: 2;
 }
 
 .title {
-  text-align: left; /* Выравнивание текста по левому краю */
-  font-size: clamp(1.75rem, 1.5982rem + 0.7589vw, 2.8125rem); /* 28px to 28px */
+  text-align: left;
+  font-size: clamp(1.75rem, 1.5982rem + 0.7589vw, 2.8125rem);
   color: white;
 }
 
 .line {
-  width: 40%; /* Ширина линии */
+  width: 40%;
   height: 10%;
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
 
 .text {
-  text-align: left; /* Выравнивание текста по левому краю */
-  font-size: clamp(
-    1.125rem,
-    1.0625rem + 0.3125vw,
-    1.5625rem
-  ); /* 18px to 25px */
+  text-align: left;
+  font-size: clamp(1.125rem, 1.0625rem + 0.3125vw, 1.5625rem);
   color: white;
 }
 
@@ -77,18 +90,13 @@
   background-color: rgb(233, 237, 198);
 }
 
-.background {
-  height: calc(100vh - 187px);
-}
-
-/* Tablets */
+/* Media Queries */
 @media (max-width: 1024px) {
   .background {
     height: calc(100vh - 80px);
   }
 }
 
-/* Tab */
 @media (max-width: 768px) {
   .background {
     padding: 2rem;
@@ -99,14 +107,12 @@
   }
 }
 
-/* Large Mobile */
 @media (max-width: 425px) {
   .background {
     height: calc(100vh - 64px);
   }
 }
 
-/* Small Mobile */
 @media (max-width: 375px) {
   .title {
     font-size: 1.5rem;

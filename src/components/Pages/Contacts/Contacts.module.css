@@ -69,6 +69,10 @@
   border: none;
 }
 
+.socialLinks {
+  margin-bottom: 1rem;
+}
+
 .contacts .socialLinks {
   display: flex;
   justify-content: center;
