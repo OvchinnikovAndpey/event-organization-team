@@ -4,21 +4,20 @@
   align-items: center;
   justify-content: center;
   min-height: 80vh;
-  /* padding: 63px 147px; */
+  padding: 2rem;
 }
 
 .title {
   font-size: 1.75rem;
-  /* margin-bottom: 1rem; */
   font-weight: 400;
   line-height: 140%;
+  margin-bottom: 0.5rem;
 }
 
 .description {
   font-size: 1.75rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem; /* Уменьшено с 2rem */
   font-weight: 400;
-  /* line-height: 140%; */
 }
 
 .form {
@@ -26,8 +25,6 @@
   max-width: 270px;
   display: flex;
   flex-direction: column;
-  /* align-items: center;
-  align-items: flex-start; */
   gap: 1rem;
 }
 
@@ -76,28 +73,15 @@
 .socialLinks a {
   color: #333;
   font-size: 1.8rem;
-  transition: color 0.3s ease;
-}
-
-.socialLinks a:hover {
-  color: #1a1a1a;
+  transition: color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
 }
 
 .socialText {
   margin-top: 3.125rem;
-  /* margin-bottom: 1.25rem; */
   font-size: 18px;
   font-weight: 400;
   text-align: center;
-}
-
-.socialLinks a {
-  color: #333;
-  font-size: 1.8rem;
-  transition:
-    color 0.3s ease,
-    transform 0.3s ease; /* Добавлено transform */
-  display: inline-block;
 }
 
 .socialLinks a:nth-child(1) {
@@ -121,4 +105,109 @@
   color: red;
   font-size: 12px;
   margin-top: 4px;
+}
+
+@media (max-width: 768px) {
+  .formContainer {
+    min-height: 70vh;
+    padding: 1.5rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .description {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem; /* Уменьшено с 1.5rem */
+  }
+}
+
+@media (max-width: 480px) {
+  .formContainer {
+    min-height: 60vh;
+    padding: 1rem;
+  }
+
+  .title {
+    font-size: 1.25rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .description {
+    font-size: 1rem;
+    margin-bottom: 0.5rem; /* Уменьшено с 1rem */
+  }
+
+  .input {
+    height: 50px;
+    padding: 1rem;
+  }
+
+  .button {
+    height: 50px;
+    font-size: 1rem;
+  }
+
+  .socialLinks {
+    gap: 1rem;
+  }
+
+  .socialLinks a {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-height: 600px) {
+  .formContainer {
+    min-height: auto;
+    padding: 1rem 0;
+  }
+}
+
+@media (min-width: 250px) and (max-width: 300px) {
+  .formContainer {
+    min-height: 50vh;
+    padding: 0.5rem;
+  }
+
+  .title {
+    font-size: 1rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .description {
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem; /* Уменьшено с 0.75rem */
+  }
+
+  .form {
+    max-width: 230px;
+  }
+
+  .input {
+    height: 40px;
+    padding: 0.75rem;
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .button {
+    height: 40px;
+    font-size: 0.875rem;
+  }
+
+  .socialLinks {
+    gap: 0.75rem;
+  }
+
+  .socialLinks a {
+    font-size: 1.2rem;
+  }
+
+  .socialText {
+    font-size: 0.875rem;
+    margin-top: 1.5rem;
+  }
 }
