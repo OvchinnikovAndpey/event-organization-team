@@ -63,7 +63,7 @@ const Contacts: React.FC = () => {
           <div className={styles.modalImage}>
             <img
               className={styles.modalImage}
-              src="src\images\thank-you.svg"
+              src="/images/thank-you.png"
               alt="Thank You"
             />
           </div>

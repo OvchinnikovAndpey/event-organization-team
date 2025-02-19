@@ -7,12 +7,14 @@ import MyTeam from "./components/Pages/MyTeam/MyTeam";
 import Services from "./components/Pages/Services/Services";
 import General from "./components/Pages/General/General";
 import Gallery from "./components/Pages/Gallerey/Gallerey";
+import { Metrika } from "./components/Metrika/Metrica";
 import "./styles/global.css";
 import "./styles/variables.css";
 
 const App: React.FC = () => {
   return (
     <BrowserRouter>
+      <Metrika />
       <Layout>
         <Routes>
           <Route path="/" element={<General />} />

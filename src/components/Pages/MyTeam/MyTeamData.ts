@@ -45,7 +45,7 @@ export const teamData: TeamMember[] = [
     id: 6,
     name: "DJ BAGIROV",
     description:
-      "DJ BAGIROV  - это настоящий профессионал, который способен создать атмосферу, которая будет запоминаться надолго.",
+      "DJ BAGIROV  - это настоящий профессионал, который способен создать атмосферу, которая запомнится надолго.",
     photo: "/images/myTeamImages/baga.jpg",
   },
   {
